@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V09ZV0XYR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0V09ZV0XYR');
+        </script>
+        <meta charset="utf-8">
+        <title>    Dominando o Vim: 100 Comandos para Maximizar sua Eficiência no Linux
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/theme/css/cid.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="container">
+
+<header class="blog-header">
+    <h1><a href="">Emilio Eiji</a></h1>
+    <p></p>
+    <nav>
+        <a href="/">INDEX</a>
+        <a href="/archives">ARCHIVES</a>
+        <a href="/categories">CATEGORIES</a>
+    </nav>
+</header>
+
+    <div class="post">
+
+        <header>
+            <h1>Dominando o Vim: 100 Comandos para Maximizar sua Eficiência no Linux</h1>
+            <p class="date">Written on <time datetime="2013-06-02T00:00:00+09:00">jun 02, 2013</time></p>
+        </header>
+
+        <article>
+            <p>O Vim é um editor de texto poderoso e altamente configurável que pode impulsionar a sua produtividade no Linux. Neste guia, você vai explorar 100 comandos essenciais para melhorar a sua utilização do Vim e se tornar um verdadeiro mestre nessa ferramenta.</p>
+<h2>Comandos de Navegação:</h2>
+<ul>
+<li><code>h, j, k, l:</code> Navegar para esquerda, baixo, cima e direita.</li>
+<li><code>0 e $:</code> Ir para o início e o final da linha, respectivamente.</li>
+<li><code>gg e G:</code> Ir para o início e o final do arquivo, respectivamente.</li>
+<li><code>Ctrl + d e Ctrl + u:</code> Rolar metade da tela para baixo e para cima.</li>
+<li><code>:n e :n:m:</code> Ir para a linha n ou para o intervalo de linhas n até m.</li>
+<li><code>%:</code> Ir para o parêntese, colchete ou chave correspondente.</li>
+</ul>
+<h2>Comandos de Edição:</h2>
+<ul>
+<li><code>i e a:</code> Inserir antes e após o cursor.</li>
+<li><code>o e O:</code> Abrir uma nova linha abaixo ou acima da linha atual.</li>
+<li><code>x e X:</code> Apagar um caractere sob o cursor e antes do cursor.</li>
+<li><code>dd:</code> Apagar a linha atual.</li>
+<li><code>yy:</code> Copiar a linha atual.</li>
+<li><code>p e P:</code> Colar o conteúdo copiado/apagado após e antes do cursor.</li>
+<li><code>u e Ctrl + r:</code> Desfazer e refazer ações.</li>
+<li><code>.:</code> Repetir a última ação.</li>
+</ul>
+<h2>Comandos de Busca e Substituição:</h2>
+<ul>
+<li><code>/texto:</code> Buscar por "texto" para frente.</li>
+<li><code>?texto:</code> Buscar por "texto" para trás.</li>
+<li><code>n e N:</code> Ir para a próxima e a anterior ocorrência de busca.</li>
+<li><code>:%s/antigo/novo/g:</code> Substituir todas as ocorrências de "antigo" por "novo".</li>
+<li><code>:s/antigo/novo/g:</code> Substituir a primeira ocorrência de "antigo" por "novo" na linha atual.</li>
+</ul>
+<h2>Comandos de Seleção e Bloco de Texto:</h2>
+<ul>
+<li><code>v:</code> Modo visual para seleção de caracteres.</li>
+<li><code>V:</code> Modo visual para seleção de linhas.</li>
+<li><code>Ctrl + v:</code> Modo visual de bloco para seleção retangular.</li>
+<li><code>y:</code> Copiar texto selecionado.</li>
+<li><code>d:</code> Apagar texto selecionado.</li>
+</ul>
+<h2>Comandos de Múltiplas Janelas:</h2>
+<ul>
+<li><code>:sp e :vsp:</code> Dividir a janela horizontal e verticalmente.</li>
+<li><code>Ctrl + ww:</code> Alternar entre janelas.</li>
+<li><code>Ctrl + w + hjkl:</code> Navegar entre janelas.</li>
+</ul>
+<h2>Comandos de Salvamento e Fechamento:</h2>
+<ul>
+<li><code>:w:</code> Salvar o arquivo.</li>
+<li><code>:q:</code> Fechar o arquivo.</li>
+<li><code>:wq ou ZZ:</code> Salvar e fechar.</li>
+</ul>
+<h2>Comandos de Configuração:</h2>
+<ul>
+<li><code>:set número:</code> Mostrar números de linha.</li>
+<li><code>:set nonumber:</code> Ocultar números de linha.</li>
+<li><code>:set expandtab:</code> Usar espaços em vez de TAB.</li>
+<li><code>:set tabstop=n:</code> Definir o tamanho de TAB para n espaços.</li>
+<li><code>:set hlsearch:</code> Realçar termos de busca.</li>
+<li><code>:set incsearch:</code> Realçar termos de busca durante a digitação.</li>
+</ul>
+<h2>Comandos Avançados:</h2>
+<ul>
+<li><code>.:</code> Repetir a última alteração.</li>
+<li><code>:e nome_do_arquivo:</code> Abrir um novo arquivo.</li>
+<li><code>:r nome_do_arquivo:</code> Inserir conteúdo de outro arquivo.</li>
+<li><code>:w nome_do_arquivo:</code> Salvar como um novo arquivo.</li>
+<li><code>:!comando:</code> Executar um comando shell sem sair do Vim.</li>
+<li><code>:e!:</code> Descartar alterações e recarregar o arquivo.</li>
+</ul>
+<h2>Comandos de Mapeamento de Teclas:</h2>
+<ul>
+<li><code>:map atalho comando:</code> Mapear um atalho para um comando.</li>
+<li><code>:nmap, :vmap e :imap:</code> Mapear atalhos em modos específicos.</li>
+<li><code>:unmap atalho:</code> Desfazer um mapeamento.</li>
+</ul>
+<h2>Comandos de Ajuda:</h2>
+<ul>
+<li><code>:help:</code> Abrir a documentação do Vim.</li>
+<li><code>:q (na tela de ajuda):</code> Fechar a tela de ajuda.</li>
+</ul>
+<h2>Comandos para Plugins:</h2>
+<ul>
+<li><code>:PluginInstall:</code> Instalar plugins (requisito: gerenciador de plugins instalado).</li>
+<li><code>:NERDTreeToggle:</code> Abrir/fechar o NERDTree para navegação.</li>
+<li><code>:Ack termo_de_busca:</code> Buscar termo usando o Ack (requisito: plugin Ack instalado).</li>
+</ul>
+<h2>Personalizando o Vim:</h2>
+<ul>
+<li><code>~/.vimrc:</code> Arquivo de configuração do Vim.</li>
+<li><code>:colorscheme nome_do_esquema:</code> Alterar o esquema de cores.</li>
+</ul>
+<h2>Comandos de Comentários:</h2>
+<ul>
+<li><code>:s/^/# /g:</code> Comentar todas as linhas.</li>
+<li><code>:s/^# //g:</code> Descomentar todas as linhas.</li>
+</ul>
+<h2>Comandos de Macros:</h2>
+<ul>
+<li><code>q + letra:</code> Iniciar gravação de macro na letra especificada.</li>
+<li><code>q:</code> Parar gravação de macro.</li>
+<li><code>@ + letra:</code> Executar macro na letra especificada.</li>
+</ul>
+<h2>Comandos de Redefinição:</h2>
+<ul>
+<li><code>:set all:</code> Mostrar todas as opções de configuração.</li>
+<li><code>:set option&amp;:</code> Redefinir uma opção para seu valor padrão.</li>
+</ul>
+<h2>Comandos de Mapeamento de Texto:</h2>
+<ul>
+<li><code>:ab atalho texto:</code> Criar um atalho para um texto.</li>
+<li><code>:unab atalho:</code> Remover um atalho.</li>
+</ul>
+<h2>Comandos de Comentários em Blocos:</h2>
+<ul>
+<li><code>:2,5s/^/# /:</code> Comentar um bloco de linhas.</li>
+<li><code>:2,5s/^# //:</code> Descomentar um bloco de linhas.</li>
+</ul>
+<h2>Comandos de Contagem:</h2>
+<ul>
+<li><code>:set relativenumber:</code> Mostrar números de linha relativos.</li>
+<li><code>:set number:</code> Mostrar números de linha absolutos.</li>
+<li><code>Ctrl + g:</code> Mostrar informações sobre o arquivo e</li>
+</ul>
+        </article>
+
+        <footer>
+            <p>This entry is posted in <a href="/category/linux.html">Linux</a>.</p>
+        </footer>
+
+
+    </div>
+
+
+<footer class="blog-footer">
+
+    <ul class="nav">
+    </ul>
+
+    <p class="disclaimer">
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    </p>
+</footer>
+            </div>
+    </body>
+</html>

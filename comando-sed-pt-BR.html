@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V09ZV0XYR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0V09ZV0XYR');
+        </script>
+        <meta charset="utf-8">
+        <title>    Utilizando o Sed para Alterar Trechos em Múltiplos Arquivos
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/theme/css/cid.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="container">
+
+<header class="blog-header">
+    <h1><a href="">Emilio Eiji</a></h1>
+    <p></p>
+    <nav>
+        <a href="/">INDEX</a>
+        <a href="/archives">ARCHIVES</a>
+        <a href="/categories">CATEGORIES</a>
+    </nav>
+</header>
+
+    <div class="post">
+
+        <header>
+            <h1>Utilizando o Sed para Alterar Trechos em Múltiplos Arquivos</h1>
+            <p class="date">Written on <time datetime="2018-05-28T00:00:00+09:00">mai 28, 2018</time></p>
+        </header>
+
+        <article>
+            <p>Você já se deparou com a necessidade de fazer alterações de uma parte de código ou alguma tag em vários arquivos de uma vez só? Se sim, o utilitário sed pode ser seu aliado nessa tarefa. Neste tutorial, vou te guiar pelo processo que utilizei ao usar o sed para substituir o trecho :tag: por :tags: em diversos arquivos .rst dentro de um diretório.</p>
+<h2>Passo 1: Abrindo o Terminal</h2>
+<p>Abra o terminal e navegue até o diretório onde estão localizados os arquivos .rst que você deseja alterar.</p>
+<h2>Passo 2: Utilizando o Sed para Substituição</h2>
+<p>Execute o seguinte comando para usar o sed e substituir :tag: por :tags: em todos os arquivos .rst no diretório:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/:tag:/:tags:/g&#39;</span><span class="w"> </span>*.rst
+</code></pre></div>
+
+<ul>
+<li>-i: Esse parâmetro permite a edição in-place dos arquivos, ou seja, as alterações serão feitas diretamente nos arquivos.</li>
+<li>'s/:tag:/:tags:/g': Isso indica ao sed para substituir todas as ocorrências de :tag: por :tags:.</li>
+<li>*.rst: Isso especifica os arquivos .rst nos quais você deseja realizar a substituição.</li>
+</ul>
+<h2>Passo 3: Verificando as Alterações</h2>
+<p>Após executar o comando, abra um dos arquivos .rst alterados para verificar se a substituição foi realizada corretamente. Você deverá ver todas as instâncias de :tag: substituídas por :tags:.</p>
+<p>Dica Extra: Cuidados com o Backup</p>
+<p>O uso do -i no sed faz alterações diretamente nos arquivos, sem criar backups. Se você quiser criar backups antes das alterações, pode utilizar a seguinte variação do comando:</p>
+<div class="highlight"><pre><span></span><code>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="s1">&#39;s/:tag:/:tags:/g&#39;</span><span class="w"> </span>*.rst
+</code></pre></div>
+
+<p>Isso criará cópias de backup dos arquivos originais com a extensão .bak.</p>
+<p>Agora você sabe como usar o sed para substituir trechos específicos em múltiplos arquivos .rst de uma só vez. Esse é apenas um dos muitos usos úteis desse poderoso utilitário de linha de comando. Experimente e explore suas capacidades para simplificar ainda mais suas tarefas de edição!</p>
+        </article>
+
+        <footer>
+            <p>This entry is posted in <a href="/category/linux.html">Linux</a>.</p>
+        </footer>
+
+
+    </div>
+
+
+<footer class="blog-footer">
+
+    <ul class="nav">
+    </ul>
+
+    <p class="disclaimer">
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    </p>
+</footer>
+            </div>
+    </body>
+</html>

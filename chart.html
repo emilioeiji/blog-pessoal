@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gráficos Donut com Texto no Meio</title>
+  <!-- Inclua o Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Coluna 1 -->
+      <div class="col-md-4">
+        <canvas id="donutChart1" width="200" height="200"></canvas>
+      </div>
+      <!-- Coluna 2 -->
+      <div class="col-md-4">
+        <canvas id="donutChart2" width="200" height="200"></canvas>
+      </div>
+      <!-- Coluna 3 -->
+      <div class="col-md-4">
+        <canvas id="donutChart3" width="200" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Código JavaScript -->
+  <script>
+    // Dados para os gráficos
+    var data1 = {
+      labels: ['Categoria 1', 'Categoria 2', 'Categoria 3'],
+      datasets: [{
+        data: [30, 40, 30],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      }]
+    };
+
+    var data2 = {
+      labels: ['Categoria 1', 'Categoria 2', 'Categoria 3'],
+      datasets: [{
+        data: [20, 50, 30],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      }]
+    };
+
+    var data3 = {
+      labels: ['Categoria 1', 'Categoria 2', 'Categoria 3'],
+      datasets: [{
+        data: [10, 60, 30],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      }]
+    };
+
+    // Opções com legenda desativada
+    var options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutoutPercentage: 80,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          enabled: false
+        }
+      }
+    };
+
+    // Renderização dos gráficos
+    var ctx1 = document.getElementById('donutChart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'doughnut',
+      data: data1,
+      options: options
+    });
+
+    // Adicione um rótulo no meio do donut manualmente
+    var centerX1 = (ctx1.canvas.width / 2);
+    var centerY1 = (ctx1.canvas.height / 2);
+    ctx1.font = '16px sans-serif';
+    ctx1.fillStyle = '#000';
+    ctx1.textAlign = 'center';
+    ctx1.textBaseline = 'middle';
+    ctx1.fillText('Valor 1', centerX1, centerY1);
+
+    var ctx2 = document.getElementById('donutChart2').getContext('2d');
+    var chart2 = new Chart(ctx2, {
+      type: 'doughnut',
+      data: data2,
+      options: options
+    });
+
+    var centerX2 = (ctx2.canvas.width / 2);
+    var centerY2 = (ctx2.canvas.height / 2);
+    ctx2.font = '16px Arial';
+    ctx2.fillStyle = '#000';
+    ctx2.textAlign = 'center';
+    ctx2.textBaseline = 'middle';
+    ctx2.fillText('Valor 2', centerX2, centerY2);
+
+    var ctx3 = document.getElementById('donutChart3').getContext('2d');
+    var chart3 = new Chart(ctx3, {
+      type: 'doughnut',
+      data: data3,
+      options: options
+    });
+
+    var centerX3 = (ctx3.canvas.width / 2);
+    var centerY3 = (ctx3.canvas.height / 2);
+    ctx3.font = '16px Arial';
+    ctx3.fillStyle = '#000';
+    ctx3.textAlign = 'center';
+    ctx3.textBaseline = 'middle';
+    ctx3.fillText('Valor 3', centerX3, centerY3);
+  </script>
+</body>
+</html>

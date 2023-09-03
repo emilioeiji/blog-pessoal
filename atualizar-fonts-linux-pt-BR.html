@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V09ZV0XYR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0V09ZV0XYR');
+        </script>
+        <meta charset="utf-8">
+        <title>    Atualizando Fontes no Linux: Mantendo seu Texto com Visual Atraente
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/theme/css/cid.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="container">
+
+<header class="blog-header">
+    <h1><a href="">Emilio Eiji</a></h1>
+    <p></p>
+    <nav>
+        <a href="/">INDEX</a>
+        <a href="/archives">ARCHIVES</a>
+        <a href="/categories">CATEGORIES</a>
+    </nav>
+</header>
+
+    <div class="post">
+
+        <header>
+            <h1>Atualizando Fontes no Linux: Mantendo seu Texto com Visual Atraente</h1>
+            <p class="date">Written on <time datetime="2018-12-09T00:00:00+09:00">dez 09, 2018</time></p>
+        </header>
+
+        <article>
+            <p>Quando se trata de design e legibilidade, a escolha das fontes é crucial. No entanto, depois de instalar novas fontes no seu sistema Linux, você também precisa se certificar de que elas sejam atualizadas e disponíveis para todas as suas aplicações. Neste guia, vamos explorar como atualizar as fontes após instalá-las para garantir um visual atraente e consistente em todo o sistema.</p>
+<h2>Atualizando o Cache de Fontes:</h2>
+<p>Após instalar novas fontes, é importante atualizar o cache de fontes do sistema para que as aplicações possam reconhecê-las corretamente. Siga os passos abaixo para fazer isso:</p>
+<ol>
+<li>Abra o terminal.</li>
+<li>
+<p>Caso não existir o diretório .fonts na raiz do seu horme, deve-se criá-lo:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>~/.fonts
+</code></pre></div>
+
+</li>
+<li>
+<p>Coloque os novos arquivos dentro do diretório .fonts.</p>
+</li>
+<li>Use o seguinte comando para atualizar o cache de fontes:<div class="highlight"><pre><span></span><code>fc-cache<span class="w"> </span>-fv
+</code></pre></div>
+
+</li>
+</ol>
+<p>Esse comando regenera o cache de fontes com base nas fontes instaladas no sistema.</p>
+<h2>Verificando a Atualização:</h2>
+<p>Para verificar se as fontes foram atualizadas corretamente, você pode usar o seguinte comando:</p>
+<div class="highlight"><pre><span></span><code>fc-list
+</code></pre></div>
+
+<p>Isso exibirá uma lista de todas as fontes disponíveis no sistema, incluindo as que você acabou de instalar.</p>
+<h2>Aplicando as Fontes Atualizadas:</h2>
+<p>Depois de atualizar o cache de fontes, as novas fontes devem estar disponíveis em suas aplicações. Você pode selecioná-las e aplicá-las de acordo com suas preferências:</p>
+<ol>
+<li>Vá para as configurações de fonte da sua aplicação, seja no sistema ou nas configurações específicas da aplicação.</li>
+<li>Procure a lista de fontes disponíveis e selecione a fonte atualizada que você deseja usar.</li>
+<li>Aplique a fonte e observe a mudança no visual do texto.</li>
+<li>No meu caso em que estava utilizando o GIMP, tive fechar e abrir a aplicação novamente para surtir efeito.</li>
+</ol>
+        </article>
+
+        <footer>
+            <p>This entry is posted in <a href="/category/linux.html">Linux</a>.</p>
+        </footer>
+
+
+    </div>
+
+
+<footer class="blog-footer">
+
+    <ul class="nav">
+    </ul>
+
+    <p class="disclaimer">
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    </p>
+</footer>
+            </div>
+    </body>
+</html>

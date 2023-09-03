@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0V09ZV0XYR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0V09ZV0XYR');
+        </script>
+        <meta charset="utf-8">
+        <title>    Instalando o Pelican Usando Ambientes Virtuais (venv): Um Guia Passo a Passo
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/theme/css/cid.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="container">
+
+<header class="blog-header">
+    <h1><a href="">Emilio Eiji</a></h1>
+    <p></p>
+    <nav>
+        <a href="/">INDEX</a>
+        <a href="/archives">ARCHIVES</a>
+        <a href="/categories">CATEGORIES</a>
+    </nav>
+</header>
+
+    <div class="post">
+
+        <header>
+            <h1>Instalando o Pelican Usando Ambientes Virtuais (venv): Um Guia Passo a Passo</h1>
+            <p class="date">Written on <time datetime="2023-08-17T00:00:00+09:00">ago 17, 2023</time></p>
+        </header>
+
+        <article>
+            <p>Como criar um blog estático poderoso e flexível usando o Pelican? Neste guia, vou te guiar pelo processo de instalação do Pelican usando ambientes virtuais (venv), garantindo uma configuração limpa e organizada.</p>
+<h2>Passo 1: Configurando o Python e venv</h2>
+<p>Antes de começarmos, certifique-se de ter o Python instalado em seu sistema. Você também precisará do venv, que é um módulo Python integrado usado para criar ambientes isolados.</p>
+<h2>Passo 2: Criar um Novo Ambiente Virtual</h2>
+<p>Abra o seu terminal e navegue até o diretório onde você deseja configurar o seu projeto com o Pelican. Em seguida, execute o seguinte comando para criar um novo ambiente virtual chamado "meu_pelican_env" (você pode substituir esse nome pelo que preferir):</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>meu_pelican_env
+</code></pre></div>
+
+<h2>Passo 3: Ativar o Ambiente Virtual</h2>
+<p>Ative o ambiente virtual executando o comando apropriado para o seu sistema operacional:</p>
+<p>No Windows:</p>
+<div class="highlight"><pre><span></span><code>meu_pelican_env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</code></pre></div>
+
+<p>No macOS e Linux:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>meu_pelican_env/bin/activate
+</code></pre></div>
+
+<p>Você saberá que o ambiente virtual está ativo quando ver o nome do ambiente em seu prompt de terminal.</p>
+<h2>Passo 4: Instalar o Pelican</h2>
+<p>Com o ambiente virtual ativado, use o pip para instalar o Pelican:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pelican
+</code></pre></div>
+
+<h2>Passo 5: Verificar a Instalação</h2>
+<p>Para se certificar de que o Pelican foi instalado corretamente, execute o seguinte comando:</p>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>--version
+</code></pre></div>
+
+<p>Você deverá ver o número da versão do Pelican exibido no terminal.</p>
+<p>Parabéns! Você instalou com sucesso o Pelican usando um ambiente virtual. Essa abordagem mantém o seu projeto do Pelican isolado de outros projetos Python, evitando conflitos potenciais e garantindo um ambiente de desenvolvimento limpo.</p>
+<p>Agora você está pronto para começar a criar o seu blog estático usando o Pelican.</p>
+<h2>Passo 6: Criando sua Primeira Postagem</h2>
+<p>Agora que você tem o Pelican instalado, é hora de criar sua primeira postagem. Siga estes passos:</p>
+<ol>
+<li>
+<p>No diretório do seu projeto Pelican, execute o seguinte comando para criar uma nova postagem em formato Markdown:</p>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>content<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;Título da Sua Postagem&quot;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Isso criará um arquivo Markdown na pasta "content". Edite esse arquivo com o conteúdo da sua postagem.</p>
+</li>
+<li>
+<p>Para gerar o site com a nova postagem, execute:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>html
+</code></pre></div>
+
+</li>
+<li>
+<p>Para poder visualizar como está ficando a sua postagem execute:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>serve
+</code></pre></div>
+
+<p>Retornará algo como:</p>
+<div class="highlight"><pre><span></span><code>Serving<span class="w"> </span>site<span class="w"> </span>at:<span class="w"> </span>http://127.0.0.1:8000<span class="w"> </span>-<span class="w"> </span>Tap<span class="w"> </span>CTRL-C<span class="w"> </span>to<span class="w"> </span>stop
+</code></pre></div>
+
+<p>Basta acessar o endereço <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> no seu navegador que terá acesso ao blog.</p>
+</li>
+</ol>
+<h2>Passo 7: Instalando um Tema</h2>
+<p>Personalizar a aparência do seu blog é uma parte empolgante. Você pode instalar um tema pronto para dar ao seu blog um visual único. Aqui está como fazer:</p>
+<ol>
+<li>
+<p>Escolha um tema no repositório oficial do Pelican Themes: <a href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a>.</p>
+</li>
+<li>
+<p>Clone o repositório do tema escolhido para a pasta "themes" no diretório do seu projeto Pelican:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>&lt;URL_do_Repositório_do_Tema&gt;<span class="w"> </span>themes/&lt;Nome_do_Tema&gt;
+</code></pre></div>
+
+</li>
+<li>
+<p>Abra o arquivo "pelicanconf.py" no diretório raiz do seu projeto e adicione a seguinte linha para especificar o tema:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">THEME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;themes/&lt;Nome_do_Tema&gt;&quot;</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Gere novamente o seu site com o comando:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>html
+</code></pre></div>
+
+<p>E em seguida:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>serve
+</code></pre></div>
+
+</li>
+</ol>
+<p>Agora, seu blog estará usando o novo tema! Você pode personalizar ainda mais o tema ajustando as configurações no arquivo "pelicanconf.py" e explorando as opções de personalização do tema.</p>
+<p>Continue explorando e experimentando para fazer o melhor uso dessa poderosa ferramenta de criação de blogs estáticos.</p>
+        </article>
+
+        <footer>
+            <p>This entry is posted in <a href="/category/linux.html">Linux</a>.</p>
+        </footer>
+
+
+    </div>
+
+
+<footer class="blog-footer">
+
+    <ul class="nav">
+    </ul>
+
+    <p class="disclaimer">
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    </p>
+</footer>
+            </div>
+    </body>
+</html>
